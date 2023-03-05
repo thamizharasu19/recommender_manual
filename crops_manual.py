@@ -66,7 +66,7 @@ def crop_suggest():
     pred_ml = model_ml.predict(X)[0]
     pred_nb = model_nb.predict(X)[0]
     pred_sd = model_sd.predict(X)[0]
-
+    s = [*set(res)]
     res = [pred_rf,pred_ml,pred_nb,pred_sd]
     for i in range(len(s)):
         pos = val_out.index(s[i])
