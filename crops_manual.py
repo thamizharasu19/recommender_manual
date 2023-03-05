@@ -67,7 +67,7 @@ def crop_suggest():
     pred_nb = model_nb.predict(X)[0]
     pred_sd = model_sd.predict(X)[0]
     res = [pred_rf,pred_ml,pred_nb,pred_sd]
-    s = [set(res)]
+    s = [*set(res)]
     for i in range(len(s)):
         pos = val_out.index(s[i])
         st.info('THE BEST CROP FOR YOU IS: %s' %(key_out[pos]))
